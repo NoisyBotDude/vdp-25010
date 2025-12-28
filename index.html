@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Design | Tezpur University</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-inter bg-gray-50 text-gray-900 transition-colors duration-300">
+    
+    <!-- Sticky Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Section -->
+                <div class="flex items-center space-x-4">
+                    <img src="assets/tu_logo.png" alt="Tezpur University" class="h-12 w-auto object-contain">
+                    <img src="assets/design_dept_logo.png" alt="Department of Design" class="h-10 w-auto object-contain">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors">About</a>
+                    <a href="#programs" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors">Programs</a>
+                    <a href="#facilities" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors">Facilities</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors">Contact</a>
+                    <a href="#contact" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">Apply / Enquire</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg bg-gray-100 text-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-4 space-y-4">
+                <a href="#home" class="block nav-link text-gray-700 py-2">Home</a>
+                <a href="#about" class="block nav-link text-gray-700 py-2">About</a>
+                <a href="#programs" class="block nav-link text-gray-700 py-2">Programs</a>
+                <a href="#facilities" class="block nav-link text-gray-700 py-2">Facilities</a>
+                <a href="#contact" class="block nav-link text-gray-700 py-2">Contact</a>
+                <a href="#contact" class="block text-center px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">Apply / Enquire</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8" data-aos="fade-right">
+                    <h1 class="font-space text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                        Department of <span class="text-indigo-600">Design</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 leading-relaxed">
+                        Design thinking • Innovation • Human-centered learning
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#programs" class="px-8 py-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all transform hover:scale-105 font-medium shadow-lg">
+                            Explore Programs
+                        </a>
+                        <a href="#facilities" class="px-8 py-4 bg-white text-indigo-600 border-2 border-indigo-600 rounded-lg hover:bg-indigo-50 transition-all transform hover:scale-105 font-medium">
+                            View Facilities
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Image -->
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" 
+                             alt="Design Studio" 
+                             class="w-full h-auto object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Stats Row -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="text-4xl font-bold text-indigo-600 counter" data-target="12">0</div>
+                    <div class="text-gray-600 mt-2 font-medium">Programs</div>
+                </div>
+                <div class="stat-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="text-4xl font-bold text-indigo-600 counter" data-target="8">0</div>
+                    <div class="text-gray-600 mt-2 font-medium">Studios</div>
+                </div>
+                <div class="stat-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="text-4xl font-bold text-indigo-600 counter" data-target="24">0</div>
+                    <div class="text-gray-600 mt-2 font-medium">Workshops</div>
+                </div>
+                <div class="stat-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="text-4xl font-bold text-indigo-600 counter" data-target="500">0</div>
+                    <div class="text-gray-600 mt-2 font-medium">Student Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gestalt Showcase Strip -->
+    <section class="py-12 bg-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4" data-aos="fade-up">
+                <div class="gestalt-card group bg-white rounded-lg p-4 text-center cursor-pointer hover:shadow-lg transition-all transform hover:scale-105 relative">
+                    <div class="text-3xl mb-2 text-indigo-600">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="font-medium text-gray-900">Proximity</div>
+                    <div class="gestalt-tooltip">Related items grouped together</div>
+                </div>
+                <div class="gestalt-card group bg-white rounded-lg p-4 text-center cursor-pointer hover:shadow-lg transition-all transform hover:scale-105 relative">
+                    <div class="text-3xl mb-2 text-indigo-600">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                    <div class="font-medium text-gray-900">Similarity</div>
+                    <div class="gestalt-tooltip">Consistent styles create grouping</div>
+                </div>
+                <div class="gestalt-card group bg-white rounded-lg p-4 text-center cursor-pointer hover:shadow-lg transition-all transform hover:scale-105 relative">
+                    <div class="text-3xl mb-2 text-indigo-600">
+                        <i class="fas fa-stream"></i>
+                    </div>
+                    <div class="font-medium text-gray-900">Continuity</div>
+                    <div class="gestalt-tooltip">Guided flow through elements</div>
+                </div>
+                <div class="gestalt-card group bg-white rounded-lg p-4 text-center cursor-pointer hover:shadow-lg transition-all transform hover:scale-105 relative">
+                    <div class="text-3xl mb-2 text-indigo-600">
+                        <i class="fas fa-circle-notch"></i>
+                    </div>
+                    <div class="font-medium text-gray-900">Closure</div>
+                    <div class="gestalt-tooltip">Implied shapes via spacing</div>
+                </div>
+                <div class="gestalt-card group bg-white rounded-lg p-4 text-center cursor-pointer hover:shadow-lg transition-all transform hover:scale-105 relative">
+                    <div class="text-3xl mb-2 text-indigo-600">
+                        <i class="fas fa-object-group"></i>
+                    </div>
+                    <div class="font-medium text-gray-900">Figure-Ground</div>
+                    <div class="gestalt-tooltip">Strong contrast creates focus</div>
+                </div>
+                <div class="gestalt-card group bg-white rounded-lg p-4 text-center cursor-pointer hover:shadow-lg transition-all transform hover:scale-105 relative">
+                    <div class="text-3xl mb-2 text-indigo-600">
+                        <i class="fas fa-border-all"></i>
+                    </div>
+                    <div class="font-medium text-gray-900">Common Region</div>
+                    <div class="gestalt-tooltip">Boxed sections group content</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Vision Text -->
+                <div class="space-y-6" data-aos="fade-right">
+                    <h2 class="font-space text-4xl md:text-5xl font-bold text-gray-900">
+                        Shaping the Future of Design
+                    </h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        The Department of Design at Tezpur University is dedicated to fostering creative excellence and innovation through interdisciplinary learning. We believe in empowering students to become visionary designers who can address complex challenges with human-centered solutions.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Our approach combines traditional design principles with cutting-edge technology, preparing students for careers that bridge creativity and functionality in an ever-evolving global landscape.
+                    </p>
+                </div>
+                
+                <!-- Right: Feature Cards -->
+                <div class="space-y-6" data-aos="fade-left">
+                    <div class="feature-card bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-indigo-100 rounded-lg p-3">
+                                <i class="fas fa-lightbulb text-indigo-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-space text-xl font-bold text-gray-900 mb-2">Design Thinking</h3>
+                                <p class="text-gray-600">A methodology that emphasizes empathy, ideation, and iterative problem-solving to create innovative solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-teal-100 rounded-lg p-3">
+                                <i class="fas fa-palette text-teal-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-space text-xl font-bold text-gray-900 mb-2">Studio Culture</h3>
+                                <p class="text-gray-600">A collaborative environment where students learn through hands-on projects and peer feedback in dedicated creative spaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-amber-100 rounded-lg p-3">
+                                <i class="fas fa-project-diagram text-amber-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-space text-xl font-bold text-gray-900 mb-2">Interdisciplinary Learning</h3>
+                                <p class="text-gray-600">Cross-pollination of ideas across disciplines, enabling students to integrate diverse perspectives into their design practice.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-space text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Our Programs
+                </h2>
+                <p class="text-xl text-gray-600">Choose the path that fits your design journey</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- B.Des Card -->
+                <div class="program-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">B.Des</div>
+                    <div class="text-gray-500 mb-6">Bachelor of Design</div>
+                    <div class="text-2xl font-semibold text-gray-900 mb-6">4 Years</div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Foundation in design principles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Specialization tracks available</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Industry internships included</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Product Design</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Visual Design</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Interaction</span>
+                    </div>
+                </div>
+                
+                <!-- M.Des Card -->
+                <div class="program-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border-2 border-indigo-600" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">M.Des</div>
+                    <div class="text-gray-500 mb-6">Master of Design</div>
+                    <div class="text-2xl font-semibold text-gray-900 mb-6">2 Years</div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Advanced design research</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Thesis project required</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Research publications encouraged</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Design Research</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Systems Design</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Innovation</span>
+                    </div>
+                </div>
+                
+                <!-- Integrated B.Des + M.Des Card -->
+                <div class="program-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">B+M.Des</div>
+                    <div class="text-gray-500 mb-6">Integrated Program</div>
+                    <div class="text-2xl font-semibold text-gray-900 mb-6">5 Years</div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Seamless progression</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Extended research opportunities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Dual degree awarded</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Comprehensive</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Flexible</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Research Focus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-space text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Facilities & Labs
+                </h2>
+                <p class="text-xl text-gray-600">State-of-the-art spaces for creative exploration</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="facility-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop" alt="Design Studio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-space text-xl font-bold text-gray-900 mb-2">Design Studio</h3>
+                        <p class="text-gray-600">Spacious studios for collaborative design work and critiques</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=400&fit=crop" alt="Prototyping Lab" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-space text-xl font-bold text-gray-900 mb-2">Prototyping Lab</h3>
+                        <p class="text-gray-600">Advanced tools for physical and digital prototyping</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop" alt="Digital Media Lab" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-space text-xl font-bold text-gray-900 mb-2">Digital Media Lab</h3>
+                        <p class="text-gray-600">Cutting-edge software and hardware for digital creation</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600&h=400&fit=crop" alt="Materials Library" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-space text-xl font-bold text-gray-900 mb-2">Materials Library</h3>
+                        <p class="text-gray-600">Extensive collection of materials and samples for reference</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="Seminar Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-space text-xl font-bold text-gray-900 mb-2">Seminar Room</h3>
+                        <p class="text-gray-600">Modern space for lectures, workshops, and presentations</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105" data-aos="fade-up" data-aos-delay="600">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=400&fit=crop" alt="Exhibition Space" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-space text-xl font-bold text-gray-900 mb-2">Exhibition Space</h3>
+                        <p class="text-gray-600">Gallery space for showcasing student and faculty work</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- News/Notices Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2" data-aos="fade-right">
+                    <h2 class="font-space text-4xl md:text-5xl font-bold text-gray-900 mb-12">
+                        News & Notices
+                    </h2>
+                    <!-- Placeholder for other content if needed -->
+                </div>
+                
+                <div class="space-y-6" data-aos="fade-left">
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer group">
+                        <div class="text-sm text-indigo-600 font-medium mb-2">March 15, 2024</div>
+                        <h3 class="font-space text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">New Workshop on Design Systems</h3>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer group">
+                        <div class="text-sm text-indigo-600 font-medium mb-2">March 10, 2024</div>
+                        <h3 class="font-space text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Admissions Open for 2024-25</h3>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer group">
+                        <div class="text-sm text-indigo-600 font-medium mb-2">March 5, 2024</div>
+                        <h3 class="font-space text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Student Exhibition Showcase</h3>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer group">
+                        <div class="text-sm text-indigo-600 font-medium mb-2">February 28, 2024</div>
+                        <h3 class="font-space text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Guest Lecture by Industry Expert</h3>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer group">
+                        <div class="text-sm text-indigo-600 font-medium mb-2">February 20, 2024</div>
+                        <h3 class="font-space text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Design Thinking Workshop Results</h3>
+                    </div>
+                    <button class="w-full mt-6 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">
+                        View All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-space text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Get in Touch
+                </h2>
+                <p class="text-xl text-gray-600">We'd love to hear from you</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Left: Address Block -->
+                <div class="space-y-8" data-aos="fade-right">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="font-space text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-indigo-100 rounded-lg p-3">
+                                    <i class="fas fa-map-marker-alt text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900 mb-1">Address</div>
+                                    <div class="text-gray-600">Department of Design<br>Tezpur University<br>Napaam, Tezpur - 784028<br>Assam, India</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-indigo-100 rounded-lg p-3">
+                                    <i class="fas fa-phone text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900 mb-1">Phone</div>
+                                    <div class="text-gray-600">+91 (03712) 267007</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-indigo-100 rounded-lg p-3">
+                                    <i class="fas fa-envelope text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900 mb-1">Email</div>
+                                    <div class="text-gray-600">design@tezu.ernet.in</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Icons -->
+                        <div class="mt-8 pt-8 border-t border-gray-200">
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-indigo-600 hover:text-white transition-colors">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-indigo-600 hover:text-white transition-colors">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-indigo-600 hover:text-white transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-indigo-600 hover:text-white transition-colors">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Enquiry Form -->
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="font-space text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" required 
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                <div class="flex items-center space-x-4">
+                    <img src="assets/tu_logo.png" alt="Tezpur University" class="h-10 w-auto object-contain opacity-90">
+                    <img src="assets/design_dept_logo.png" alt="Department of Design" class="h-8 w-auto object-contain opacity-90">
+                </div>
+                <div class="text-gray-400 text-center md:text-right">
+                    <p>&copy; 2024 Department of Design, Tezpur University. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Toast Container -->
+    <div id="toast-container" class="fixed bottom-4 right-4 z-50 space-y-2"></div>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
