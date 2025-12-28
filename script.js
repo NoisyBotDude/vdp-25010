@@ -217,7 +217,10 @@ window.addEventListener('scroll', function() {
 // Preload Images for Better Performance
 function preloadImages() {
     const imageUrls = [
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop',
+        'assets/gate.jpeg',
+        'assets/bird-eye.jpeg',
+        'assets/tu_logo.png',
+        'assets/design_dept_logo.png',
         'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop',
         'https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=400&fit=crop',
         'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop',
